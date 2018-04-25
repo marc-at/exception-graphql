@@ -1,0 +1,29 @@
+{
+  "name": "exception-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "deploy:nocheck": "node node_modules/deploy/deploy.js",
+    "dev": "nodemon --inspect=127.0.0.1:9249 -- local/server.js"
+  },
+  "dependencies": {
+    "graphql": "^0.13.2",
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^8.0.1",
+    "babel-jest": "^21.0.2",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "express": "^4.15.4",
+    "express-graphql": "^0.6.12",
+    "nodemon": "^1.12.1",
+    "serverless": "^1.25.0"
+  }
+}
