@@ -14,9 +14,11 @@ class ApiError extends Error {
     if (Error.captureStackTrace) {
       Error.captureStackTrace(this, ApiError)
     }
-    this.date = new Date()
-    this.type = type
-    this.errors = errors
+    this.extensions = {
+      date: new Date(),
+      type,
+      errors
+    };
   }
 }
 
