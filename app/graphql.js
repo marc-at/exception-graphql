@@ -48,12 +48,12 @@ module.exports.schema = schema
 
 const run = (query, variables, params) => {
   console.log('query = ', query)
-  return graphql(schema, query, null, params, variables).then(
-    result => {
-        if (result && result.errors) {
-          result.errors = result.errors.map(formatError);
-        }
-        return result
+  return graphql(schema, query, null, params, variables)
+    .then(result => {
+      if (result && result.errors) {
+        result.errors = result.errors.map(formatError);
+      }
+      return result
     })
 }
 module.exports.run = run
